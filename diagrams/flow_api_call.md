@@ -1,6 +1,5 @@
 flowchart TD
-    A[Start] --> B{Import necessary libraries};
-    B --> C{Define function };
+    B{Start} --> C{Function get_json_from};
     C --> D[Try to make a GET request to the URL];
     D -- Successful (status code 200) --> E[Convert response to JSON];
     E --> F[Return JSON data];
@@ -13,7 +12,4 @@ flowchart TD
     
     subgraph "Necessary Libraries"
         B1[requests]
-        B2[pandas]
     end
-
-    style B fill:#ccf,stroke:#888,stroke-width:2px
